@@ -1,7 +1,7 @@
 name: blueray
 type: theme
 description: 'It is a simple theme for drupal learning 2.'
-base theme: stable
+base theme: 'stable'
 core: 8.x
 core_version_requirement: ^8 || ^9
 package: custom
@@ -13,3 +13,9 @@ regions:
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   content: 'content'
+  content_bottom: 'Content (bottom)'
+  banner_top: 'Banner (top)'
+  banner_bottom: 'Banner (bottom)'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
