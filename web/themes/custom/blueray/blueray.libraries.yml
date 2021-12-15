@@ -3,16 +3,21 @@ global:
   css:
     theme:
       css2/style.css: {}
+  # js:
+  #   js/rainbow.js: {}
+  # dependencies:
+  #   core/jquery: {}
 bootstrap:
   js:
     js/bootstrap.min.js: {}
   css:
     theme:
       css/bootstrap.min.css: {}
-# bootstrap_cdn:
-#   js:
-#     //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
-#     //stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js: {}
+# retro:
 #   css:
-#     component:
-#      //stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css: {}
+#     theme:
+#       css/fonts.css: { weight: 10 }
+#   js:
+#     js/rainbow-headings.js: {}
+#     dependencies:
+#       - blueray/global

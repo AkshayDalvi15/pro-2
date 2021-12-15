@@ -70,10 +70,17 @@
  *   in different view modes.
  */
 #}
+{# {{ dump(_context|keys) }} #}
+{%
+  set classes = [
+    current_user_is_owner ? 'node--current-user-is-owner'
+  ]
+%}
 
-
-<article{{ attributes }}>
-
+<article{{ attributes.addClass(classes) }}>
+{% if not node.isPublished() %}
+  <div class="alert alert-warning">{{ "This node is not published"|t }}</div>
+{% endif %}
   {{ title_prefix }}
   {% if not page %}
     <h2{{ title_attributes }}>
@@ -92,8 +99,12 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
-    {{ content }}
+  <div class="row  jumbotron align-middle d-flex justify-content-center">
+    {{ content.field_image}}
   </div>
+  <div{{ content_attributes.addClass('node__content', 'row' ) }}>
+    {{ content|without('field_image') }}
+  </div>
+  {% trans %}The Current time is: {{ today_date }}{% endtrans %} 
 
 </article>
